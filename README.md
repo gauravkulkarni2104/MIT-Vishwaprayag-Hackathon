@@ -1,85 +1,76 @@
-# MIT-Vishwaprayag-Hackathon
+
+The architecture is modular and designed for scalability.
 
 ---
 
-## Development Journey
+## Technology Stack (Planned)
 
-We are building this system in structured phases to ensure scalability, modularity, and cloud readiness.
-
----
-
-## Phase 1 – Planning & Architecture
-
-- Define system requirements  
-- Design 4 core portals  
-- Plan cloud-based deployment  
-- Create backend folder structure  
-- Design database schema  
+| Layer      | Technology |
+|------------|------------|
+| Backend    | Python (Flask) |
+| Frontend   | HTML, CSS, JavaScript |
+| Database   | Cloud-based SQL |
+| ML Engine  | Pandas, Scikit-learn |
+| Deployment | Docker + Cloud Platform |
 
 ---
 
-## Phase 2 – Backend Development
+## Development Roadmap
 
-- Initialize Flask application  
-- Configure database connection  
-- Create models:
-  - User  
-  - Hospital  
-  - DiseaseCase  
-  - Inventory  
-  - Patient  
-  - Appointment  
-- Develop REST API endpoints  
-- Implement basic CRUD operations  
+### Phase 1 – System Design (Completed)
+- Requirement analysis  
+- Architecture planning  
+- Database schema design  
+- UI prototype creation  
 
----
+### Phase 2 – Backend Development (In Progress)
+- API development  
+- Database integration  
+- Portal modules implementation  
 
-## Phase 3 – Frontend Development
+### Phase 3 – Cloud Integration (Planned)
+- Cloud database setup  
+- Deployment configuration  
+- Secure environment setup  
 
-- Design single-page dashboard layout  
-- Create 4 portal sections:
-  - Disease Surveillance  
-  - Hospital Resource Management  
-  - Admin Dashboard  
-  - Citizen Portal  
-- Connect frontend with backend APIs  
-- Add charts and analytics visualization  
+### Phase 4 – ML Integration (Planned)
+- Dataset collection  
+- Model training  
+- Outbreak prediction integration  
 
 ---
 
-## Phase 4 – Cloud Integration
+## Prototype Status
 
-- Deploy backend to cloud platform  
-- Configure cloud-hosted database  
-- Store ML datasets in cloud storage  
-- Enable secure API access  
+- UI prototype designed  
+- Portal workflow defined  
+- System architecture planned  
+- Core features mapped  
 
----
-
-## Phase 5 – Machine Learning Integration
-
-- Collect historical disease dataset  
-- Perform data preprocessing  
-- Train outbreak prediction model  
-- Integrate ML predictions into admin dashboard  
+The prototype demonstrates the structure and interaction flow of the system.
 
 ---
 
-## Phase 6 – Testing & Optimization
-
-- API endpoint testing  
-- Database performance validation  
-- ML model evaluation  
-- System optimization  
-- Bug fixing & final deployment  
-
----
-
-## Long-Term Vision
+## Future Scope
 
 - GIS-based disease heatmaps  
+- Mobile application version  
 - Real-time hospital API integration  
-- Mobile application support  
-- Government healthcare system integration  
+- Government health data integration  
+- Advanced predictive modeling  
 
 ---
+
+## Target Users
+
+- Municipal Health Departments  
+- Public Hospitals  
+- Healthcare Administrators  
+- Citizens  
+
+---
+
+## License
+
+This project is developed as part of MIT Vishwaprayag Hackathon 2026.
+
