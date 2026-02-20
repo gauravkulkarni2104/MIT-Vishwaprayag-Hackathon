@@ -1,0 +1,993 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Smart Health Surveillance & Resource Management System - Cloud-Based Healthcare Monitoring Platform">
+    <title>Smart Health Surveillance System | Healthcare Management Dashboard</title>
+    
+    <!-- Google Fonts - Distinctive Typography -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Outfit:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Custom Stylesheet -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <!-- ====================================== -->
+    <!-- HEADER SECTION -->
+    <!-- ====================================== -->
+    <header class="main-header">
+        <div class="header-top">
+            <div class="container">
+                <div class="emergency-banner">
+                    <i class="fas fa-shield-virus"></i>
+                    <span>National Health Emergency Hotline: 1800-XXX-XXXX</span>
+                </div>
+                <div class="header-actions">
+                    <button class="btn-icon" id="notificationBtn">
+                        <i class="fas fa-bell"></i>
+                        <span class="badge">3</span>
+                    </button>
+                    <button class="btn-icon" id="userBtn">
+                        <i class="fas fa-user-circle"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <div class="header-main">
+            <div class="container">
+                <div class="logo-section">
+                    <div class="logo-icon">
+                        <i class="fas fa-heartbeat"></i>
+                    </div>
+                    <div class="logo-text">
+                        <h1 class="system-title">Smart Health Surveillance System</h1>
+                        <p class="system-subtitle">Cloud-Based Healthcare Monitoring Platform</p>
+                    </div>
+                </div>
+                
+                <!-- Navigation Bar -->
+                <nav class="main-nav" id="mainNav">
+                    <ul class="nav-list">
+                        <li><a href="#home" class="nav-link active"><i class="fas fa-home"></i> Home</a></li>
+                        <li><a href="#surveillance" class="nav-link"><i class="fas fa-chart-line"></i> Surveillance</a></li>
+                        <li><a href="#hospital" class="nav-link"><i class="fas fa-hospital"></i> Hospital Portal</a></li>
+                        <li><a href="#admin" class="nav-link"><i class="fas fa-cog"></i> Admin Dashboard</a></li>
+                        <li><a href="#citizen" class="nav-link"><i class="fas fa-users"></i> Citizen Services</a></li>
+                    </ul>
+                </nav>
+                
+                <!-- Mobile Menu Toggle -->
+                <button class="mobile-menu-toggle" id="mobileMenuToggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- ====================================== -->
+    <!-- HERO SECTION / HOME -->
+    <!-- ====================================== -->
+    <section id="home" class="hero-section">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h2 class="hero-title">
+                        Empowering Healthcare Through
+                        <span class="gradient-text">Intelligent Surveillance</span>
+                    </h2>
+                    <p class="hero-description">
+                        Real-time disease monitoring, predictive analytics, and resource optimization 
+                        for smarter healthcare management across the city.
+                    </p>
+                    <div class="hero-stats">
+                        <div class="stat-item">
+                            <div class="stat-number" data-target="247">0</div>
+                            <div class="stat-label">Hospitals Connected</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number" data-target="1.2">0</div>
+                            <div class="stat-label">Million Citizens</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number" data-target="99.9">0</div>
+                            <div class="stat-label">% Uptime</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="hero-visual">
+                    <div class="floating-card card-1">
+                        <i class="fas fa-viruses"></i>
+                        <span>AI Outbreak Detection</span>
+                    </div>
+                    <div class="floating-card card-2">
+                        <i class="fas fa-bed"></i>
+                        <span>Real-time Bed Tracking</span>
+                    </div>
+                    <div class="floating-card card-3">
+                        <i class="fas fa-syringe"></i>
+                        <span>Vaccine Inventory</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ====================================== -->
+    <!-- SECTION 1: DISEASE SURVEILLANCE & ANALYTICS -->
+    <!-- ====================================== -->
+    <section id="surveillance" class="section surveillance-section">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-title-group">
+                    <h2 class="section-title">Disease Surveillance & Analytics Portal</h2>
+                    <p class="section-subtitle">AI-powered disease tracking and outbreak prediction</p>
+                </div>
+                <div class="section-actions">
+                    <button class="btn btn-secondary" id="refreshDataBtn">
+                        <i class="fas fa-sync-alt"></i> Refresh Data
+                    </button>
+                </div>
+            </div>
+
+            <!-- Dashboard Cards -->
+            <div class="dashboard-cards">
+                <div class="dash-card card-blue">
+                    <div class="card-icon">
+                        <i class="fas fa-chart-bar"></i>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">Total Cases</h3>
+                        <div class="card-value" data-count="15847">0</div>
+                        <div class="card-change positive">
+                            <i class="fas fa-arrow-down"></i> 12% from last week
+                        </div>
+                    </div>
+                </div>
+
+                <div class="dash-card card-orange">
+                    <div class="card-icon">
+                        <i class="fas fa-exclamation-triangle"></i>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">Active Cases</h3>
+                        <div class="card-value" data-count="3245">0</div>
+                        <div class="card-change negative">
+                            <i class="fas fa-arrow-up"></i> 8% from last week
+                        </div>
+                    </div>
+                </div>
+
+                <div class="dash-card card-red">
+                    <div class="card-icon">
+                        <i class="fas fa-map-marked-alt"></i>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">High Risk Areas</h3>
+                        <div class="card-value" data-count="7">0</div>
+                        <div class="card-change neutral">
+                            <i class="fas fa-minus"></i> No change
+                        </div>
+                    </div>
+                </div>
+
+                <div class="dash-card card-purple">
+                    <div class="card-icon">
+                        <i class="fas fa-brain"></i>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">AI Outbreak Prediction</h3>
+                        <div class="card-value">LOW</div>
+                        <div class="card-change positive">
+                            <i class="fas fa-check-circle"></i> Risk Minimal
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Analytics Chart Area -->
+            <div class="analytics-container">
+                <div class="chart-section">
+                    <div class="chart-header">
+                        <h3>Disease Trend Analysis</h3>
+                        <div class="chart-controls">
+                            <button class="chart-btn active" data-period="7d">7 Days</button>
+                            <button class="chart-btn" data-period="30d">30 Days</button>
+                            <button class="chart-btn" data-period="90d">90 Days</button>
+                        </div>
+                    </div>
+                    <div class="chart-placeholder">
+                        <canvas id="trendChart"></canvas>
+                        <div class="chart-overlay">
+                            <i class="fas fa-chart-line"></i>
+                            <p>Interactive trend visualization</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="insights-panel">
+                    <h3>AI Insights</h3>
+                    <div class="insight-item">
+                        <i class="fas fa-lightbulb"></i>
+                        <div class="insight-content">
+                            <h4>Seasonal Pattern Detected</h4>
+                            <p>Cases typically increase during monsoon season. Prepare resources accordingly.</p>
+                        </div>
+                    </div>
+                    <div class="insight-item">
+                        <i class="fas fa-exclamation-circle"></i>
+                        <div class="insight-content">
+                            <h4>Hotspot Alert: Zone 5</h4>
+                            <p>Unusual case concentration detected. Recommend enhanced surveillance.</p>
+                        </div>
+                    </div>
+                    <div class="insight-item">
+                        <i class="fas fa-check-circle"></i>
+                        <div class="insight-content">
+                            <h4>Recovery Rate Improving</h4>
+                            <p>Overall recovery rate up by 15% compared to last month.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Action Buttons -->
+            <div class="section-footer">
+                <button class="btn btn-primary btn-large" id="viewAnalyticsBtn">
+                    <i class="fas fa-chart-pie"></i> View Detailed Analytics
+                </button>
+                <button class="btn btn-danger btn-large" id="generateAlertBtn">
+                    <i class="fas fa-bell"></i> Generate Outbreak Alert
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- ====================================== -->
+    <!-- SECTION 2: HOSPITAL RESOURCE & INVENTORY MANAGEMENT -->
+    <!-- ====================================== -->
+    <section id="hospital" class="section hospital-section">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-title-group">
+                    <h2 class="section-title">Hospital Resource & Inventory Management</h2>
+                    <p class="section-subtitle">Real-time tracking of beds, equipment, and medical supplies</p>
+                </div>
+                <div class="section-actions">
+                    <button class="btn btn-primary" id="updateInventoryBtn">
+                        <i class="fas fa-sync"></i> Update Inventory
+                    </button>
+                </div>
+            </div>
+
+            <!-- Resource Overview Cards -->
+            <div class="resource-grid">
+                <div class="resource-card">
+                    <div class="resource-header">
+                        <i class="fas fa-bed"></i>
+                        <h3>Bed Availability</h3>
+                    </div>
+                    <div class="resource-stats">
+                        <div class="stat-row">
+                            <span>General Beds</span>
+                            <span class="stat-value good">2,847 / 4,500</span>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 63%"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="resource-card">
+                    <div class="resource-header">
+                        <i class="fas fa-procedures"></i>
+                        <h3>ICU Availability</h3>
+                    </div>
+                    <div class="resource-stats">
+                        <div class="stat-row">
+                            <span>ICU Beds</span>
+                            <span class="stat-value warning">234 / 850</span>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress-fill warning" style="width: 27%"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="resource-card">
+                    <div class="resource-header">
+                        <i class="fas fa-wind"></i>
+                        <h3>Oxygen Stock</h3>
+                    </div>
+                    <div class="resource-stats">
+                        <div class="stat-row">
+                            <span>Cylinders</span>
+                            <span class="stat-value good">4,567 units</span>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 76%"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="resource-card">
+                    <div class="resource-header">
+                        <i class="fas fa-syringe"></i>
+                        <h3>Vaccine Stock</h3>
+                    </div>
+                    <div class="resource-stats">
+                        <div class="stat-row">
+                            <span>Doses Available</span>
+                            <span class="stat-value good">87,934 doses</span>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 88%"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="resource-card">
+                    <div class="resource-header">
+                        <i class="fas fa-pills"></i>
+                        <h3>Medicine Stock</h3>
+                    </div>
+                    <div class="resource-stats">
+                        <div class="stat-row">
+                            <span>Critical Meds</span>
+                            <span class="stat-value critical">Low Stock</span>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress-fill critical" style="width: 15%"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="resource-card">
+                    <div class="resource-header">
+                        <i class="fas fa-user-md"></i>
+                        <h3>Medical Staff</h3>
+                    </div>
+                    <div class="resource-stats">
+                        <div class="stat-row">
+                            <span>On Duty</span>
+                            <span class="stat-value good">1,247 / 1,500</span>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 83%"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Hospital Status Table -->
+            <div class="table-container">
+                <div class="table-header">
+                    <h3>Hospital-wise Status</h3>
+                    <div class="table-actions">
+                        <input type="text" placeholder="Search hospital..." class="search-input" id="hospitalSearch">
+                        <button class="btn btn-secondary btn-small">
+                            <i class="fas fa-download"></i> Export
+                        </button>
+                    </div>
+                </div>
+                <div class="table-wrapper">
+                    <table class="data-table" id="hospitalTable">
+                        <thead>
+                            <tr>
+                                <th>Hospital Name</th>
+                                <th>Location</th>
+                                <th>Beds Available</th>
+                                <th>ICU Beds</th>
+                                <th>Oxygen</th>
+                                <th>Status</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>City General Hospital</strong></td>
+                                <td>Central District</td>
+                                <td><span class="badge badge-success">342/500</span></td>
+                                <td><span class="badge badge-warning">12/50</span></td>
+                                <td><span class="badge badge-success">High</span></td>
+                                <td><span class="status-indicator active"></span> Active</td>
+                                <td><button class="btn-link">View Details</button></td>
+                            </tr>
+                            <tr>
+                                <td><strong>Memorial Healthcare Center</strong></td>
+                                <td>North Zone</td>
+                                <td><span class="badge badge-success">198/300</span></td>
+                                <td><span class="badge badge-success">28/40</span></td>
+                                <td><span class="badge badge-success">High</span></td>
+                                <td><span class="status-indicator active"></span> Active</td>
+                                <td><button class="btn-link">View Details</button></td>
+                            </tr>
+                            <tr>
+                                <td><strong>St. Mary's Medical Center</strong></td>
+                                <td>South District</td>
+                                <td><span class="badge badge-warning">45/250</span></td>
+                                <td><span class="badge badge-danger">3/35</span></td>
+                                <td><span class="badge badge-warning">Medium</span></td>
+                                <td><span class="status-indicator active"></span> Active</td>
+                                <td><button class="btn-link">View Details</button></td>
+                            </tr>
+                            <tr>
+                                <td><strong>Apollo Super Specialty</strong></td>
+                                <td>East Zone</td>
+                                <td><span class="badge badge-success">567/750</span></td>
+                                <td><span class="badge badge-success">89/120</span></td>
+                                <td><span class="badge badge-success">High</span></td>
+                                <td><span class="status-indicator active"></span> Active</td>
+                                <td><button class="btn-link">View Details</button></td>
+                            </tr>
+                            <tr>
+                                <td><strong>Community Health Hospital</strong></td>
+                                <td>West District</td>
+                                <td><span class="badge badge-success">123/200</span></td>
+                                <td><span class="badge badge-warning">8/25</span></td>
+                                <td><span class="badge badge-success">High</span></td>
+                                <td><span class="status-indicator active"></span> Active</td>
+                                <td><button class="btn-link">View Details</button></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- Action Buttons -->
+            <div class="section-footer">
+                <button class="btn btn-primary btn-large" id="viewHospitalStatusBtn">
+                    <i class="fas fa-hospital-alt"></i> View Hospital Status
+                </button>
+                <button class="btn btn-secondary btn-large" id="downloadReportBtn">
+                    <i class="fas fa-file-download"></i> Download Report
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- ====================================== -->
+    <!-- SECTION 3: ADMIN DASHBOARD -->
+    <!-- ====================================== -->
+    <section id="admin" class="section admin-section">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-title-group">
+                    <h2 class="section-title">Admin Dashboard Portal</h2>
+                    <p class="section-subtitle">System management and strategic planning tools</p>
+                </div>
+            </div>
+
+            <!-- Admin Overview Grid -->
+            <div class="admin-grid">
+                <!-- System Statistics -->
+                <div class="admin-card full-width">
+                    <h3><i class="fas fa-tachometer-alt"></i> System Overview</h3>
+                    <div class="overview-stats">
+                        <div class="overview-item">
+                            <div class="overview-icon blue">
+                                <i class="fas fa-server"></i>
+                            </div>
+                            <div class="overview-details">
+                                <h4>Server Status</h4>
+                                <p class="status-text success">All Systems Operational</p>
+                                <span class="uptime">Uptime: 99.98%</span>
+                            </div>
+                        </div>
+                        <div class="overview-item">
+                            <div class="overview-icon green">
+                                <i class="fas fa-database"></i>
+                            </div>
+                            <div class="overview-details">
+                                <h4>Database Health</h4>
+                                <p class="status-text success">Healthy</p>
+                                <span class="uptime">Last Backup: 2 hours ago</span>
+                            </div>
+                        </div>
+                        <div class="overview-item">
+                            <div class="overview-icon orange">
+                                <i class="fas fa-users"></i>
+                            </div>
+                            <div class="overview-details">
+                                <h4>Active Users</h4>
+                                <p class="status-text">2,847 Online</p>
+                                <span class="uptime">Peak: 3,450 users</span>
+                            </div>
+                        </div>
+                        <div class="overview-item">
+                            <div class="overview-icon purple">
+                                <i class="fas fa-shield-alt"></i>
+                            </div>
+                            <div class="overview-details">
+                                <h4>Security Status</h4>
+                                <p class="status-text success">No Threats Detected</p>
+                                <span class="uptime">Last Scan: 15 min ago</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- System Activity -->
+                <div class="admin-card">
+                    <h3><i class="fas fa-chart-area"></i> System Activity</h3>
+                    <div class="activity-list">
+                        <div class="activity-item">
+                            <div class="activity-time">10:45 AM</div>
+                            <div class="activity-content">
+                                <i class="fas fa-check-circle success"></i>
+                                <span>Database backup completed successfully</span>
+                            </div>
+                        </div>
+                        <div class="activity-item">
+                            <div class="activity-time">10:30 AM</div>
+                            <div class="activity-content">
+                                <i class="fas fa-user-plus info"></i>
+                                <span>New hospital added: Rainbow Children's</span>
+                            </div>
+                        </div>
+                        <div class="activity-item">
+                            <div class="activity-time">10:15 AM</div>
+                            <div class="activity-content">
+                                <i class="fas fa-bell warning"></i>
+                                <span>Low oxygen alert: 3 hospitals</span>
+                            </div>
+                        </div>
+                        <div class="activity-item">
+                            <div class="activity-time">09:50 AM</div>
+                            <div class="activity-content">
+                                <i class="fas fa-sync info"></i>
+                                <span>Data synchronization completed</span>
+                            </div>
+                        </div>
+                        <div class="activity-item">
+                            <div class="activity-time">09:30 AM</div>
+                            <div class="activity-content">
+                                <i class="fas fa-file-alt info"></i>
+                                <span>Monthly report generated</span>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="btn btn-link full-width">View All Activity</button>
+                </div>
+
+                <!-- User Management -->
+                <div class="admin-card">
+                    <h3><i class="fas fa-users-cog"></i> User Management</h3>
+                    <div class="user-stats-grid">
+                        <div class="user-stat">
+                            <div class="user-stat-number">847</div>
+                            <div class="user-stat-label">Total Users</div>
+                        </div>
+                        <div class="user-stat">
+                            <div class="user-stat-number">234</div>
+                            <div class="user-stat-label">Admins</div>
+                        </div>
+                        <div class="user-stat">
+                            <div class="user-stat-number">45</div>
+                            <div class="user-stat-label">Pending</div>
+                        </div>
+                    </div>
+                    <div class="user-actions">
+                        <button class="btn btn-secondary btn-small full-width">
+                            <i class="fas fa-user-plus"></i> Add New User
+                        </button>
+                        <button class="btn btn-secondary btn-small full-width">
+                            <i class="fas fa-key"></i> Manage Permissions
+                        </button>
+                        <button class="btn btn-secondary btn-small full-width">
+                            <i class="fas fa-list"></i> View All Users
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Reports Section -->
+                <div class="admin-card full-width">
+                    <h3><i class="fas fa-file-download"></i> Reports & Downloads</h3>
+                    <div class="reports-grid">
+                        <div class="report-item">
+                            <i class="fas fa-file-pdf"></i>
+                            <div class="report-details">
+                                <h4>Disease Surveillance Report</h4>
+                                <p>Monthly compilation of disease trends</p>
+                            </div>
+                            <button class="btn btn-primary btn-small">Download</button>
+                        </div>
+                        <div class="report-item">
+                            <i class="fas fa-file-excel"></i>
+                            <div class="report-details">
+                                <h4>Hospital Resource Data</h4>
+                                <p>Real-time inventory and bed status</p>
+                            </div>
+                            <button class="btn btn-primary btn-small">Download</button>
+                        </div>
+                        <div class="report-item">
+                            <i class="fas fa-file-chart-line"></i>
+                            <div class="report-details">
+                                <h4>Analytics Dashboard Export</h4>
+                                <p>Comprehensive performance metrics</p>
+                            </div>
+                            <button class="btn btn-primary btn-small">Download</button>
+                        </div>
+                        <div class="report-item">
+                            <i class="fas fa-file-alt"></i>
+                            <div class="report-details">
+                                <h4>Citizen Services Log</h4>
+                                <p>User queries and appointment records</p>
+                            </div>
+                            <button class="btn btn-primary btn-small">Download</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Strategic Planning -->
+                <div class="admin-card full-width">
+                    <h3><i class="fas fa-chess"></i> Strategic Planning Tools</h3>
+                    <div class="planning-tools">
+                        <button class="planning-btn">
+                            <i class="fas fa-chart-pie"></i>
+                            <span>Resource Allocation Planner</span>
+                        </button>
+                        <button class="planning-btn">
+                            <i class="fas fa-map"></i>
+                            <span>Geographic Hotspot Analysis</span>
+                        </button>
+                        <button class="planning-btn">
+                            <i class="fas fa-flask"></i>
+                            <span>Epidemic Scenario Modeling</span>
+                        </button>
+                        <button class="planning-btn">
+                            <i class="fas fa-bullseye"></i>
+                            <span>Target vs Achievement</span>
+                        </button>
+                        <button class="planning-btn">
+                            <i class="fas fa-money-bill-wave"></i>
+                            <span>Budget Forecasting</span>
+                        </button>
+                        <button class="planning-btn">
+                            <i class="fas fa-calendar-alt"></i>
+                            <span>Vaccination Campaign Planner</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Action Buttons -->
+            <div class="section-footer">
+                <button class="btn btn-primary btn-large" id="generateReportBtn">
+                    <i class="fas fa-file-alt"></i> Generate Comprehensive Report
+                </button>
+                <button class="btn btn-secondary btn-large" id="strategicPlanningBtn">
+                    <i class="fas fa-chess-knight"></i> Open Strategic Planning Tools
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- ====================================== -->
+    <!-- SECTION 4: CITIZEN SERVICE PORTAL -->
+    <!-- ====================================== -->
+    <section id="citizen" class="section citizen-section">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-title-group">
+                    <h2 class="section-title">Citizen Service Portal</h2>
+                    <p class="section-subtitle">Healthcare services at your fingertips</p>
+                </div>
+            </div>
+
+            <div class="citizen-grid">
+                <!-- Doctor Consultation Form -->
+                <div class="service-card">
+                    <div class="service-header">
+                        <i class="fas fa-user-md"></i>
+                        <h3>Doctor Consultation</h3>
+                    </div>
+                    <form class="service-form" id="consultationForm">
+                        <div class="form-group">
+                            <label for="patientName">Full Name</label>
+                            <input type="text" id="patientName" class="form-input" placeholder="Enter your name" required>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="patientAge">Age</label>
+                                <input type="number" id="patientAge" class="form-input" placeholder="Age" min="1" max="120" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="patientGender">Gender</label>
+                                <select id="patientGender" class="form-input" required>
+                                    <option value="">Select</option>
+                                    <option value="male">Male</option>
+                                    <option value="female">Female</option>
+                                    <option value="other">Other</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="symptoms">Symptoms</label>
+                            <textarea id="symptoms" class="form-textarea" rows="4" placeholder="Describe your symptoms in detail..." required></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label for="contactNumber">Contact Number</label>
+                            <input type="tel" id="contactNumber" class="form-input" placeholder="+91 XXXXXXXXXX" required>
+                        </div>
+                        <button type="submit" class="btn btn-primary full-width">
+                            <i class="fas fa-paper-plane"></i> Submit Consultation Request
+                        </button>
+                    </form>
+                </div>
+
+                <!-- Appointment Booking Form -->
+                <div class="service-card">
+                    <div class="service-header">
+                        <i class="fas fa-calendar-check"></i>
+                        <h3>Book Appointment</h3>
+                    </div>
+                    <form class="service-form" id="appointmentForm">
+                        <div class="form-group">
+                            <label for="appointmentName">Patient Name</label>
+                            <input type="text" id="appointmentName" class="form-input" placeholder="Enter patient name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="hospitalSelect">Select Hospital</label>
+                            <select id="hospitalSelect" class="form-input" required>
+                                <option value="">Choose a hospital</option>
+                                <option value="city-general">City General Hospital</option>
+                                <option value="memorial">Memorial Healthcare Center</option>
+                                <option value="st-marys">St. Mary's Medical Center</option>
+                                <option value="apollo">Apollo Super Specialty</option>
+                                <option value="community">Community Health Hospital</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="department">Department</label>
+                            <select id="department" class="form-input" required>
+                                <option value="">Select department</option>
+                                <option value="general">General Medicine</option>
+                                <option value="cardiology">Cardiology</option>
+                                <option value="orthopedics">Orthopedics</option>
+                                <option value="pediatrics">Pediatrics</option>
+                                <option value="dermatology">Dermatology</option>
+                                <option value="neurology">Neurology</option>
+                            </select>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="appointmentDate">Preferred Date</label>
+                                <input type="date" id="appointmentDate" class="form-input" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="appointmentTime">Preferred Time</label>
+                                <input type="time" id="appointmentTime" class="form-input" required>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="reason">Reason for Visit</label>
+                            <textarea id="reason" class="form-textarea" rows="3" placeholder="Brief reason for appointment..." required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary full-width">
+                            <i class="fas fa-calendar-plus"></i> Book Appointment
+                        </button>
+                    </form>
+                </div>
+
+                <!-- AI Health Assistant -->
+                <div class="service-card ai-card">
+                    <div class="service-header">
+                        <i class="fas fa-robot"></i>
+                        <h3>AI Health Assistant</h3>
+                        <span class="ai-badge">Powered by AI</span>
+                    </div>
+                    <div class="ai-chat-container" id="aiChatContainer">
+                        <div class="ai-welcome">
+                            <i class="fas fa-heartbeat"></i>
+                            <h4>Hello! I'm your AI Health Assistant</h4>
+                            <p>Ask me about symptoms, preventive care, or general health questions.</p>
+                        </div>
+                        <div class="ai-messages" id="aiMessages">
+                            <!-- AI Chat messages will appear here -->
+                        </div>
+                    </div>
+                    <form class="ai-input-form" id="aiQueryForm">
+                        <input type="text" id="aiQueryInput" class="ai-input" placeholder="Ask me anything about health..." required>
+                        <button type="submit" class="btn-ai-send">
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </form>
+                    <div class="ai-suggestions">
+                        <button class="suggestion-chip">Common cold symptoms</button>
+                        <button class="suggestion-chip">Vaccination schedule</button>
+                        <button class="suggestion-chip">Diabetes management</button>
+                    </div>
+                </div>
+
+                <!-- Quick Services -->
+                <div class="service-card quick-services">
+                    <div class="service-header">
+                        <i class="fas fa-bolt"></i>
+                        <h3>Quick Services</h3>
+                    </div>
+                    <div class="quick-service-grid">
+                        <button class="quick-service-btn">
+                            <i class="fas fa-file-medical"></i>
+                            <span>View Medical Records</span>
+                        </button>
+                        <button class="quick-service-btn">
+                            <i class="fas fa-prescription"></i>
+                            <span>Prescription Refill</span>
+                        </button>
+                        <button class="quick-service-btn">
+                            <i class="fas fa-vial"></i>
+                            <span>Lab Test Results</span>
+                        </button>
+                        <button class="quick-service-btn">
+                            <i class="fas fa-ambulance"></i>
+                            <span>Emergency Services</span>
+                        </button>
+                        <button class="quick-service-btn">
+                            <i class="fas fa-pills"></i>
+                            <span>Medicine Reminder</span>
+                        </button>
+                        <button class="quick-service-btn">
+                            <i class="fas fa-heart"></i>
+                            <span>Health Checkup Packages</span>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Health Tips -->
+                <div class="service-card health-tips">
+                    <div class="service-header">
+                        <i class="fas fa-lightbulb"></i>
+                        <h3>Health Tips of the Day</h3>
+                    </div>
+                    <div class="tips-content">
+                        <div class="tip-item active">
+                            <i class="fas fa-check-circle"></i>
+                            <p>Drink at least 8 glasses of water daily to stay hydrated and maintain optimal body function.</p>
+                        </div>
+                        <div class="tip-item">
+                            <i class="fas fa-check-circle"></i>
+                            <p>Regular hand washing with soap for 20 seconds can prevent up to 80% of common infections.</p>
+                        </div>
+                        <div class="tip-item">
+                            <i class="fas fa-check-circle"></i>
+                            <p>Aim for 7-9 hours of quality sleep each night to boost immunity and mental health.</p>
+                        </div>
+                    </div>
+                    <button class="btn btn-link">View More Tips</button>
+                </div>
+
+                <!-- Vaccination Info -->
+                <div class="service-card vaccination-card">
+                    <div class="service-header">
+                        <i class="fas fa-syringe"></i>
+                        <h3>Vaccination Information</h3>
+                    </div>
+                    <div class="vaccination-content">
+                        <div class="vaccine-stat">
+                            <div class="vaccine-number">87,934</div>
+                            <div class="vaccine-label">Doses Available</div>
+                        </div>
+                        <div class="vaccine-types">
+                            <div class="vaccine-type">
+                                <span>COVID-19 Vaccine</span>
+                                <span class="badge badge-success">Available</span>
+                            </div>
+                            <div class="vaccine-type">
+                                <span>Flu Vaccine</span>
+                                <span class="badge badge-success">Available</span>
+                            </div>
+                            <div class="vaccine-type">
+                                <span>Hepatitis B</span>
+                                <span class="badge badge-warning">Limited</span>
+                            </div>
+                        </div>
+                        <button class="btn btn-secondary full-width">
+                            <i class="fas fa-calendar"></i> Schedule Vaccination
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ====================================== -->
+    <!-- FOOTER SECTION -->
+    <!-- ====================================== -->
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <div class="footer-logo">
+                        <i class="fas fa-heartbeat"></i>
+                        <h3>Smart Health Surveillance</h3>
+                    </div>
+                    <p class="footer-description">
+                        A comprehensive cloud-based platform for municipal healthcare management, 
+                        disease surveillance, and citizen services.
+                    </p>
+                    <div class="footer-security">
+                        <i class="fas fa-shield-alt"></i>
+                        <span>Cloud-Based Secure System</span>
+                    </div>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="#surveillance">Disease Surveillance</a></li>
+                        <li><a href="#hospital">Hospital Resources</a></li>
+                        <li><a href="#admin">Admin Portal</a></li>
+                        <li><a href="#citizen">Citizen Services</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Resources</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">Documentation</a></li>
+                        <li><a href="#">API Reference</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Contact Information</h4>
+                    <ul class="footer-contact">
+                        <li>
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Municipal Health Department<br>City Administration Building</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-phone"></i>
+                            <span>Emergency: 1800-XXX-XXXX<br>Support: +91-XXX-XXX-XXXX</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-envelope"></i>
+                            <span>health@municipality.gov.in</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p class="copyright">
+                    &copy; 2024 Smart Health Surveillance System. All rights reserved. 
+                    <span class="divider">|</span>
+                    Developed for Municipal Healthcare Administration
+                </p>
+                <div class="footer-badges">
+                    <span class="badge-item"><i class="fas fa-lock"></i> SSL Secured</span>
+                    <span class="badge-item"><i class="fas fa-cloud"></i> Cloud Hosted</span>
+                    <span class="badge-item"><i class="fas fa-check-circle"></i> ISO Certified</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Notification Toast -->
+    <div class="toast" id="toast">
+        <i class="fas fa-check-circle"></i>
+        <span id="toastMessage">Action completed successfully!</span>
+    </div>
+
+    <!-- Loading Overlay -->
+    <div class="loading-overlay" id="loadingOverlay">
+        <div class="loader"></div>
+        <p>Processing request...</p>
+    </div>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>
